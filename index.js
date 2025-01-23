@@ -7,3 +7,7 @@ console.log(hello);
 const text=fs.readFileSync('./abc.txt','utf-8');
 console.log(text);
 
+const textOut=`Start learning Node Js:${text}.\nCreated on ${Date.now()}`
+
+fs.writeFileSync('./abc.txt',textOut);
+console.log('Done');
